@@ -4,7 +4,7 @@
   * [3、mysql数据库建表时](#3、mysql数据库建表时)
   * [4、IDEA中server中文显示乱码](#4、IDEA中server中文显示乱码)
   * [5、mysql执行出现异常](#5、mysql执行出现异常)
-  * [6、微信端 扫码二维码 api scanQRCode, 不会回调](#66、微信端 扫码二维码 api scanQRCode, 不会回调)
+  * [6、微信端 扫码二维码 api scanQRCode, 不会回调](#6、微信端 扫码二维码 api scanQRCode, 不会回调)
 
 # Java Web项目中遇到的问题
 
