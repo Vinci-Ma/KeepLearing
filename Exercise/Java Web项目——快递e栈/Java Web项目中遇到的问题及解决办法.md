@@ -4,7 +4,7 @@
 
 create new Servlet时一定不要勾选create Java EE 6 annotated class
 
-![newServlet注意](https://github.com/Vinci-Ma/KeepLearning/blob/master/picture/image-20200819010834970.png)
+![newServlet注意](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200819010834970.png)
 
 ### 2、前后端交互时
 
@@ -12,7 +12,7 @@ create new Servlet时一定不要勾选create Java EE 6 annotated class
 
 ### 3、mysql数据库建表时
 
-![mysql建表](https://github.com/Vinci-Ma/KeepLearning/blob/master/picture/image-20200819012257726.png)
+![mysql建表](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200819012257726.png)
 
 出现问题原因：
 
@@ -35,17 +35,17 @@ mysql> set global explicit_defaults_for_timestamp = ON;
 
 首先IDEA的编码是GBK
 
-![idea设置](https://github.com/Vinci-Ma/KeepLearning/blob/master/picture/image-20200822175140106.png)
+![idea设置](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200822175140106.png)
 
 解决办法：
 
 将tomcat中conf文件夹下的logging.properties中控制台的编码方式改为GBK
 
-![tomcat设置](https://github.com/Vinci-Ma/KeepLearning/blob/master/picture/image-20200822175354583.png)
+![tomcat设置](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200822175354583.png)
 
 ### 5、mysql执行出现异常
 
-![mysql异常](https://github.com/Vinci-Ma/KeepLearning/blob/master/picture/image-20200826172622891.png)
+![mysql异常](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200826172622891.png)
 
 解决办法：注意在编写mysql语句时注意添加空格！
 
@@ -53,9 +53,9 @@ mysql> set global explicit_defaults_for_timestamp = ON;
 
 手机：ios系统
 
-解决办法：![微信扫码](https://github.com/Vinci-Ma/KeepLearning/blob/master/picture/image-20200831002227541.png)
+解决办法：![微信扫码](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200831002227541.png)
 
-![微信扫码](https://github.com/Vinci-Ma/KeepLearning/blob/master/picture/image-20200831002252152.png)
+![微信扫码](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200831002252152.png)
 
 [解决办法的网址](https://developers.weixin.qq.com/community/develop/doc/000e640b670ef09b8419030fa5b400?jumpto=reply&commentid=000426ef3e4d38061a2939d42518&parent_commentid=0006a0a80a08301b8c196149f5b8)
 
