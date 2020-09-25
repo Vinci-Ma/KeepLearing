@@ -4,7 +4,7 @@
   * [3、mysql数据库建表时](#3、mysql数据库建表时)
   * [4、IDEA中server中文显示乱码](#4、IDEA中server中文显示乱码)
   * [5、mysql执行出现异常](#5、mysql执行出现异常)
-  * [6、微信端 扫码二维码 api scanQRCode, 不会回调](#6、微信端 扫码二维码 api scanQRCode, 不会回调)
+  * [6、微信端 扫码二维码 api scanQRCode不会回调](#6、微信端 扫码二维码 api scanQRCode不会回调)
 
 # Java Web项目中遇到的问题
 
@@ -57,7 +57,7 @@ mysql> set global explicit_defaults_for_timestamp = ON;
 
 解决办法：注意在编写mysql语句时注意添加空格！
 
-## 6、微信端 扫码二维码 api scanQRCode, 不会回调
+## 6、微信端 扫码二维码 api scanQRCode不会回调
 
 手机：ios系统
 
