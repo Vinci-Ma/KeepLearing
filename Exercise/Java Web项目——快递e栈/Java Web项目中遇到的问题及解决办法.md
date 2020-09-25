@@ -1,16 +1,24 @@
+- [Java Web项目中遇到的问题](#Java Web项目中遇到的问题)
+  * [1、编写mvc框架时](#1、编写mvc框架时)
+  * [2、前后端交互时](#2、前后端交互时)
+  * [3、mysql数据库建表时](#3、mysql数据库建表时)
+  * [4、IDEA中server中文显示乱码](#4、IDEA中server中文显示乱码)
+  * [5、mysql执行出现异常](#5、mysql执行出现异常)
+  * [6、微信端 扫码二维码 api scanQRCode, 不会回调](#66、微信端 扫码二维码 api scanQRCode, 不会回调)
+
 # Java Web项目中遇到的问题
 
-### 1、编写mvc框架时
+## 1、编写mvc框架时
 
 create new Servlet时一定不要勾选create Java EE 6 annotated class
 
 ![newServlet注意](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200819010834970.png)
 
-### 2、前后端交互时
+## 2、前后端交互时
 
 
 
-### 3、mysql数据库建表时
+## 3、mysql数据库建表时
 
 ![mysql建表](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200819012257726.png)
 
@@ -31,7 +39,7 @@ create new Servlet时一定不要勾选create Java EE 6 annotated class
 
 mysql> set global explicit_defaults_for_timestamp = ON;
 
-### 4、IDEA中server中文显示乱码
+## 4、IDEA中server中文显示乱码
 
 首先IDEA的编码是GBK
 
@@ -43,7 +51,7 @@ mysql> set global explicit_defaults_for_timestamp = ON;
 
 ![tomcat设置](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200822175354583.png)
 
-### 5、mysql执行出现异常
+## 5、mysql执行出现异常
 
 ![mysql异常](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200826172622891.png)
 
