@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-- [Java Web项目中遇到的问题](#Java Web项目中遇到的问题)
-  * [1、编写mvc框架时](#1、编写mvc框架时)
-  * [2、前后端交互时](#2、前后端交互时)
-  * [3、mysql数据库建表时](#3、mysql数据库建表时)
-  * [4、IDEA中server中文显示乱码](#4、IDEA中server中文显示乱码)
-  * [5、mysql执行出现异常](#5、mysql执行出现异常)
-  * [6、微信端 扫码二维码 api scanQRCode不会回调](#6、微信端 扫码二维码 api scanQRCode不会回调)
-
->>>>>>> 92bdccd07b3569cdd4d1b101b469b04acc834501
 # Java Web项目中遇到的问题
 
 ## 1、编写mvc框架时
