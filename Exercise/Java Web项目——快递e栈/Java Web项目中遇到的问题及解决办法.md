@@ -10,7 +10,7 @@ create new Servlet时一定不要勾选create Java EE 6 annotated class
 
 
 
-## 3、mysql数据库建表时
+## 3、MySQL数据库建表时
 
 ![mysql建表](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200819012257726.png)
 
@@ -27,7 +27,7 @@ create new Servlet时一定不要勾选create Java EE 6 annotated class
        第一个TIMESTAMP字段会自动被加上DEFAULT CURRENT_TIMESTAMP和ON UPDATE CURRENT_TIMESTAMP属性。
        之后的TIMESTAMP字段，会被自动加上DEFAULT ‘0000-00-00 00:00:00’属性。而5.7版本的sql_mode变量中含有NO_ZERO_DATE，表示'0000-00-00 00:00:00'格式非法，这与严格模式有关。
 
-解决办法：修改全局变量explicit_defaults_for_timestamp【注：设定后重新打开mysql生效】
+解决办法：修改全局变量explicit_defaults_for_timestamp【注：设定后重新打开MySQL生效】
 
 mysql> set global explicit_defaults_for_timestamp = ON;
 
@@ -47,11 +47,11 @@ mysql> set global explicit_defaults_for_timestamp = ON;
 
 ![mysql异常](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200826172622891.png)
 
-解决办法：注意在编写mysql语句时注意添加空格！
+解决办法：注意在编写MySQL语句时注意添加空格！
 
 ## 6、微信端 扫码二维码 api scanQRCode不会回调
 
-手机：ios系统
+手机：iOS系统
 
 解决办法：![微信扫码](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/Java%20Web%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%BF%AB%E9%80%92e%E6%A0%88/picture/image-20200831002227541.png)
 

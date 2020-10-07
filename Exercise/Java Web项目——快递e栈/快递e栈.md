@@ -24,7 +24,7 @@ Servlet -> 映射器 -> 调用方法 -> 将结果返回给用户
 
 [阿里云短信](https://dysms.console.aliyun.com/dysms.htm?spm=5176.8195934.1283918..67016a7dCZFiWb&accounttraceid=f33cefcaf0f246a9846d67b23a6e9b9ccpka#/overview)
 
-- 短信签名名称：
+- 短信签名名称
 - 短信模板code
 - AccessKey ID
 - AccessKey Secret
