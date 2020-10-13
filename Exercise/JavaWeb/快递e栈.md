@@ -1,4 +1,4 @@
-![大纲](https://github.com/Vinci-Ma/KeepLearning/row/master/Exercise/JavaWeb/picture/快递e栈.png)
+![大纲](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/快递e栈.png)
 
 - [项目过程](#项目过程)
   * [项目准备](#项目准备)
