@@ -96,6 +96,14 @@ JOIN(
 		WHERE s1.score >s2.score
 ) as s
 on stu.sid = s.sid;
+解法2：
+SELECT student.sid,student.Sname, sc1.Cid,sc1.score, sc2.Cid as cid2, sc2.score
+FROM ( SELECT SId, CId, score FROM sc WHERE CId = '01' ) AS sc1
+  INNER JOIN ( SELECT SId, CId, score FROM sc WHERE CId = '02' ) AS sc2
+  ON sc1.SId = sc2.SId
+  INNER JOIN student
+  ON student.SId = sc1.sid
+WHERE sc1.score > sc2.score
 结果：
 +------+-------+------+--------+------+--------+
 | sid  | sname | cid1 | score1 | cid2 | score2 |
@@ -114,6 +122,12 @@ FROM
 	JOIN
 	(SELECT sid,score,cid FROM sc WHERE cid ='02') as s2
 	on s1.sid=s2.sid;
+解法2：
+SELECT s1.SId,s1.CId,s1.score,s2.CId,s2.score 
+FROM sc as s1 JOIN sc as s2 
+on s1.SId=s2.SId 
+WHERE s1.CId='01' AND s2.CId='02'
+
 结果：
 +------+------+--------+------+--------+
 | sid  | cid1 | score1 | cid2 | score2 |
@@ -236,7 +250,6 @@ GROUP BY stu.SId,stu.Sname;
 SELECT Tname,COUNT(teacher.TId)
 FROM teacher
 WHERE Tname LIKE '李%'
-GROUP BY Tname;
 结果：
 +-------+--------------------+
 | Tname | COUNT(teacher.TId) |
@@ -262,6 +275,12 @@ JOIN (
 ) as s2
 on s2.TId=teacher.TId
 WHERE teacher.Tname='张三';
+解法2：
+SELECT student.*
+FROM teacher JOIN course ON teacher.TId=course.TId
+JOIN sc ON course.CId=sc.CId JOIN student ON sc.SId=student.SId
+WHERE teacher.Tname='张三'
+
 结果：（张三所教学科为数学02，验证正确）
 +------+-------+---------------------+------+------+-------+
 | SId  | Sname | Sage                | Ssex | TId  | Tname |
@@ -293,6 +312,16 @@ WHERE SId not in (
 			)as s4
 	on s3.SId=s4.SId	
 );
+解法2：
+SELECT s1.sid,s1.Sname,s1.sage,s1.ssex FROM 
+(
+	SELECT stu.sid,stu.Sname,stu.sage,stu.ssex,COUNT(sc.CId) AS num
+	FROM student AS stu LEFT JOIN sc ON stu.SId=sc.SId   
+	GROUP BY stu.SId
+)AS s1
+WHERE s1.num NOT IN
+(SELECT COUNT(course.CId) FROM course)  
+
 结果：（先找出学完全部课程的学生，再检索没有在此集合内的学生，只有1、2、3、4号学生学完了全部课程）
 +------+-------+---------------------+------+
 | SId  | Sname | Sage                | Ssex |
@@ -329,7 +358,7 @@ WHERE sc.CId in (SELECT CId FROM sc WHERE sid='01');
 +------+-------+---------------------+------+
 ```
 
-### 12、查询和“01”的同学学习的课程完全相同的其他同学的信息
+### 12、【？】查询和“01”的同学学习的课程完全相同的其他同学的信息
 
 ```sql
 SELECT s2.SId,student.Sname
@@ -370,6 +399,16 @@ WHERE student.SId not in(
 	on s2.TId=teacher.TId
 	WHERE teacher.Tname='张三'
 );
+解法2：
+SELECT student.SId,student.Sname,student.Sage,student.Ssex FROM
+student
+WHERE student.SId NOT IN
+(
+	SELECT sc.SId
+	FROM teacher JOIN course ON teacher.TId=course.TId JOIN sc ON sc.CId=course.CId
+	WHERE teacher.Tname='张三'
+)
+
 结果：
 +------+-------+---------------------+------+
 | SId  | Sname | Sage                | Ssex |
@@ -418,10 +457,9 @@ ORDER BY sc.score DESC;
 +------+-------+---------------------+------+------+-------+
 ```
 
-### 16、按平均成绩从高到低显示所有学生的所有课程的成绩及平均成绩
+### 16、【？】按平均成绩从高到低显示所有学生的所有课程的成绩及平均成绩
 
 ```sql
-
 select sc.*,s2.avg_score
 from sc
 join (select sid,avg(score) as avg_score from sc group by sid) as s2
@@ -482,7 +520,7 @@ order by 平均成绩 desc;
 +-------+------+------+------+----------+
 ```
 
-### 17、查询各科成绩最高分、最低分和平均分：以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率（）及格为>=60,中等为：70-80，优良为：80-90，优秀为>=90），要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列
+### 17、【？】查询各科成绩最高分、最低分和平均分：以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率（及格为>=60,中等为：70-80，优良为：80-90，优秀为>=90），要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列
 
 ```sql
 select
@@ -509,7 +547,7 @@ order by '选修人数' desc,sc.cid;
 +------+-------+--------+--------+--------+----------+--------+--------+--------+--------+
 ```
 
-### 18、按各科平均成绩进行排序，并显示排名，Score重复时保留名次空缺
+### 18、【？】按各科平均成绩进行排序，并显示排名，Score重复时保留名次空缺
 
 ```sql
 select s2.cid,s2.avg_sc,count(distinct s1.avg_sc) as rank
@@ -530,7 +568,7 @@ order by rank;
 +------+--------+------+
 ```
 
-### 19、按各科平均成绩进行排序，并显示排名，Score重复时不保留名次空缺
+### 19、【？】按各科平均成绩进行排序，并显示排名，Score重复时不保留名次空缺
 
 ```sql
 select b.cid,b.avg_sc,@i := @i+1 as rank
@@ -614,7 +652,7 @@ GROUP BY sc.CId,course.Cname;
 +------+-------+----------+---------+---------+--------+
 ```
 
-### 23、查询各科前三名的记录
+### 23、【？】查询各科前三名的记录
 
 ```sql
 SELECT *
@@ -672,6 +710,12 @@ WHERE stu.SId in(
 			( SELECT sc.SId, COUNT( sc.CId ) AS count FROM sc GROUP BY sc.SId ) AS t 
 		WHERE count = 2
 );
+解法2：
+SELECT stu.SId,stu.Sname
+FROM sc JOIN student AS stu ON sc.SId=stu.SId
+GROUP BY sc.SId
+HAVING count(sc.CId)=2
+
 结果：
 +------+-------+
 | SId  | Sname |
@@ -766,6 +810,12 @@ FROM (
 		GROUP BY sc.SId,stu.Sname
 )as s1
 WHERE avg>=85;
+解法2：
+SELECT sc.SId,student.Sname,AVG(sc.score) AS avg_score
+FROM sc JOIN student ON sc.SId=student.SId
+GROUP BY sc.SId
+HAVING avg_score>=85
+
 结果：
 +------+-------+----------+
 | SId  | Sname | avg      |
@@ -929,7 +979,7 @@ ORDER BY score DESC LIMIT 1;
 +------+-------+---------------------+------+------+-------+
 ```
 
-### 39、成绩有重复的情况下，查询【张三】老师所授课程学生中，成绩最高的学生信息及其成绩
+### 39、【？】成绩有重复的情况下，查询【张三】老师所授课程学生中，成绩最高的学生信息及其成绩
 
 ```sql
 SELECT stu.Sname,sc.CId,sc.score
@@ -963,6 +1013,12 @@ WHERE (
 	AND b.score=a.score
 )>=2
 ORDER BY a.score;
+解法2：
+SELECT student.SId,student.Sname,s1.CId,s1.score 
+FROM sc AS s1 JOIN sc AS s2 JOIN student ON student.SId=s1.SId
+WHERE s1.score=s2.score AND s1.SId!=s2.SId AND s1.CId!=s2.CId
+GROUP BY s1.SId
+
 结果：
 +------+------+-------+
 | SId  | CId  | score |
@@ -974,7 +1030,7 @@ ORDER BY a.score;
 +------+------+-------+
 ```
 
-### 41、查询每门课程成绩最好的前两名
+### 41、【？】查询每门课程成绩最好的前两名
 
 ```sql
 SELECT *
@@ -1008,6 +1064,12 @@ FROM
 	FROM sc
 	GROUP BY sc.CId)as t
 WHERE t.count>5;
+解法2：
+SELECT sc.CId,COUNT(sc.SId) AS num
+FROM sc
+GROUP BY sc.CId
+HAVING num>5
+
 结果：
 +------+-------+
 | CId  | count |

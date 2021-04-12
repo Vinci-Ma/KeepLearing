@@ -1,16 +1,75 @@
 ![大纲](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/快递e栈.png)
 
-- [项目过程](#项目过程)
+- [项目成果展示](#项目成果展示)
+  * [后台管理](#后台管理)
+  * [微信端](#微信端)
+- - [项目过程](#项目过程)
   * [项目准备](#项目准备)
   * [一、管理员登录](#一、管理员登录)
   * [二、用户管理](#二、用户管理)
   * [三、快递管理管理](#三、快递管理管理)
   * [四、快递员管理](#四、快递员管理)
   * [五、控制台显示](#五、控制台显示)
-- [项目成果展示](#项目成果展示)
-  * [后台管理](#后台管理)
-  * [微信端](#微信端)
-  
+ 
+# 项目成果展示
+
+## 后台管理
+
+### 1、管理员的登录和退出
+
+![后台管理登录页面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理登录页面.png)
+
+### 2、快递的增加、删除、修改、列表查看操作
+
+![后台管理-快件管理相关](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理-快件管理相关.png)
+
+### 3、用户的增加、删除、修改、列表查看操作
+
+![后台管理-用户管理相关](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理-用户管理相关.png)
+
+### 4、快递员的增加、删除、修改、列表查看操作
+
+![后台管理-快递员管理相关](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理-快递员管理相关.png)
+
+### 5、控制台显示用户人数、快递员人数、快递人数、待取件快递数
+
+![后台管理控制台](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理控制台.png)
+
+### 6、短信发送
+
+![短信发送](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/短信发送.jpg)
+
+## 微信端
+
+![微信端](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/微信端.jpg)
+
+### 1、用户/快递员登录（注册）
+
+快递员页面（有快递助手）
+
+![快递员界面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/快递员界面.png)
+
+用户页面
+
+![用户页面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/用户页面.png)
+
+### 2、用户操作
+
+取件列表显示快递信息（已取件/未取件）
+
+![用户快递查看页面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/用户快递查看页面.png)
+
+快递取件码展示
+
+![二维码显示](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/二维码显示.png)
+
+### 3、快递员操作
+
+取件页面（扫码取件、取件码取件）
+
+![手机取件页面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/手机取件页面.jpg)
+
+
 # 项目过程
 ## 项目准备
 
@@ -237,62 +296,4 @@ ExpressController：具体的后端与前端数据的传输代码
 - 浏览快递员信息，可以对快递员信息进行修改，点击确认按钮，完成快递员信息的修改
 
 ## 五、控制台显示
-
-
-# 项目成果展示
-## 后台管理
-
-### 1、管理员的登录和退出
-
-![后台管理登录页面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理登录页面.png)
-
-### 2、快递的增加、删除、修改、列表查看操作
-
-![后台管理-快件管理相关](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理-快件管理相关.png)
-
-### 3、用户的增加、删除、修改、列表查看操作
-
-![后台管理-用户管理相关](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理-用户管理相关.png)
-
-### 4、快递员的增加、删除、修改、列表查看操作
-
-![后台管理-快递员管理相关](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理-快递员管理相关.png)
-
-### 5、控制台显示用户人数、快递员人数、快递人数、待取件快递数
-
-![后台管理控制台](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/后台管理控制台.png)
-
-### 6、短信发送
-
-![短信发送](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/短信发送.jpg)
-
-## 微信端
-
-![微信端](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/微信端.jpg)
-
-### 1、用户/快递员登录（注册）
-
-快递员页面（有快递助手）
-
-![快递员界面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/快递员界面.png)
-
-用户页面
-
-![用户页面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/用户页面.png)
-
-### 2、用户操作
-
-取件列表显示快递信息（已取件/未取件）
-
-![用户快递查看页面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/用户快递查看页面.png)
-
-快递取件码展示
-
-![二维码显示](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/二维码显示.png)
-
-### 3、快递员操作
-
-取件页面（扫码取件、取件码取件）
-
-![手机取件页面](https://github.com/Vinci-Ma/KeepLearning/raw/master/Exercise/JavaWeb/picture/手机取件页面.jpg)
 
