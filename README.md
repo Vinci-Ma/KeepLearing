@@ -7,6 +7,7 @@
 - [排序算法](https://github.com/Vinci-Ma/KeepLearning/blob/master/Note/%E6%8E%92%E5%BA%8F.md)
 - [MySQL必知必会](https://github.com/Vinci-Ma/KeepLearning/blob/master/Note/MySQL必知必会.md)
 - [Linux常用指令](https://github.com/Vinci-Ma/KeepLearning/blob/master/Note/Linux常用指令.md)
+- [Java序列化](https://github.com/Vinci-Ma/KeepLearning/blob/master/Note/Java序列化.md)
 # :watermelon: 练习
 - [50道SQL练习题](https://github.com/Vinci-Ma/KeepLearning/blob/master/Exercise/SQL%E7%BB%83%E4%B9%A0%E9%A2%98-50%E9%81%93.md)
 - [Java Web项目训练——快递e栈（代码）](https://github.com/Vinci-Ma/Deliver)
