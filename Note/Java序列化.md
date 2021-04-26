@@ -21,6 +21,10 @@ Java中为了实现对象的 IO 操作，必须实现 Serializable 接口，进�
 - 1、把对象转换为字节序列的过程称为对象的序列化
 - 2、把字节序列恢复为对象的过程称为对象的反序列化
 
+1、存储对象在存储介质中，以便在下次使用的时候，可以很快捷的重建一个副本，也就是 “When the resulting series of bits is reread according to the serialization format,it can be used to create a semantically identical clone of the original object”。
+
+2、便于数据传输，尤其是在远程调用的时候。
+
 # 4、什么情况下需要序列化
 
 当我们需要把对象的状态信息通过网络进行传输，或者需要将对象的状态信息持久化，以便将来使用时都需要把对象进行序列化
